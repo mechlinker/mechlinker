@@ -175,6 +175,46 @@ footer h3{font-size:13px;letter-spacing:.1em;color:var(--soft);font-weight:500;m
 .isl-facts{margin:0 0 17px;padding-left:1.1em;color:var(--soft);font-size:15px}
 .about .album{margin-top:8px;margin-bottom:17px}
 .isl-lb[hidden],.isl-toast[hidden]{display:none!important}
+/* ---- 艦長分頁 ---- */
+.cap-top{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;margin:0 0 44px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.cap-top p{margin:0;font-size:14.5px;color:var(--soft);max-width:32em}
+.stamp-row{display:flex;gap:10px;flex-wrap:wrap}
+.stamp{width:50px;height:50px;border-radius:50%;border:2.5px solid var(--ca);color:var(--ca);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:900;font-size:18px;transform:rotate(-12deg);position:relative;flex:none}
+.stamp::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px dashed var(--ca);opacity:.7}
+.caps{display:grid;gap:clamp(36px,5vw,56px)}
+.cap{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(18px,4vw,44px);align-items:start}
+@media(max-width:860px){.cap{grid-template-columns:1fr}}
+.idcard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(18,32,26,.12);min-width:0}
+.id-top{background:var(--c);color:var(--cink);display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 16px;font-family:"Archivo",sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em}
+.id-top b{font-family:"Noto Sans TC",sans-serif;font-size:15px;font-weight:900;letter-spacing:.04em}
+.id-body{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:16px 16px 10px}
+@media(max-width:420px){.id-body{grid-template-columns:104px minmax(0,1fr);gap:12px}}
+.id-photo{position:relative;aspect-ratio:4/5;border-radius:6px;background:#f6efe2;border:1px solid var(--rule);overflow:hidden}
+.id-photo img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
+.letter{position:absolute;left:6px;top:6px;width:26px;height:26px;border-radius:4px;background:var(--c);color:var(--cink);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:900;font-size:14px}
+.id-info{min-width:0;padding-right:58px}
+@media(max-width:420px){.id-info{padding-right:0}}
+.rank{display:flex;align-items:center;gap:8px}
+.bars{display:grid;gap:2px}.bars i{display:block;width:22px;height:3px;background:var(--sun);border-radius:1px}
+.rank b{font-size:14px;font-weight:900}.rank span{font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--soft)}
+.idcard h3{font-size:30px;font-weight:900;line-height:1.1;margin:6px 0 8px;letter-spacing:-.01em}
+.idcard dl{margin:0;display:grid;gap:3px}
+.idcard dl div{display:grid;grid-template-columns:4.4em minmax(0,1fr);gap:6px;font-size:13.5px;line-height:1.5}
+.idcard dt{color:var(--soft);font-size:12px}.idcard dd{margin:0}
+.idcard>.stamp{position:absolute;right:16px;top:52px;width:58px;height:58px;font-size:20px;opacity:.85;transform:rotate(14deg);background:rgba(255,255,255,.6)}
+.id-motto{margin:0 16px;padding:10px 0;border-top:1px dashed var(--rule);font-size:17px;font-weight:700;line-height:1.5}
+.id-motto::before{content:"「"}.id-motto::after{content:"」"}
+.id-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 16px 14px}
+.id-no{font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.1em;color:var(--soft)}
+.barcode{height:24px;flex:1;max-width:150px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px);opacity:.75}
+.cap-log{min-width:0}
+.cap-eyebrow{font-family:"Archivo",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ca);margin:0 0 8px}
+.cap-log p{font-size:15.5px;line-height:1.85;color:var(--soft);margin:0 0 14px;max-width:60ch}
+.task{border-left:4px solid var(--ca);padding-left:14px;margin:6px 0 16px}
+.task h4{font-size:17px;font-weight:900;margin:0 0 4px}
+.task p{color:var(--ink);margin-bottom:0}
+.cap-log .earn{font-size:14px}.earn b{color:var(--ink)}
+
 .isl-lb{position:fixed;inset:0;z-index:300;background:rgba(12,20,16,.9);display:flex;align-items:center;justify-content:center;padding:24px}
 .isl-lb img{max-width:100%;max-height:calc(100vh - 80px);border-radius:3px}
 .isl-lb button{position:absolute;top:14px;right:14px;font:inherit;color:#fff;background:none;border:1.5px solid rgba(255,255,255,.6);border-radius:3px;padding:5px 12px;cursor:pointer}
@@ -182,8 +222,10 @@ footer h3{font-size:13px;letter-spacing:.1em;color:var(--soft);font-weight:500;m
 </head>
 <body>
 <div class="load" aria-hidden="true"><div class="load__in"><div class="track"><span class="marble"></span><i class="blk b1"></i><i class="blk b2"></i><i class="blk b3"></i></div><p class="load__name">智造方舟 青年志工團</p></div></div><script>try{var L=document.querySelector(".load");if(L){if(sessionStorage.getItem("mlk_seen")){L.parentNode.removeChild(L);}else{sessionStorage.setItem("mlk_seen","1");}}}catch(e){}</script>
-<nav class="nav"><a class="nav__mark" href="index.html"><span class="nav__dot"></span>智造方舟 青年志工團</a><ul class="nav__links"><li><a href="index.html" aria-current="page">首頁</a></li><li><a href="islands.html">群島</a></li><li><a href="course.html">機關王課程</a></li><li><a href="events.html">活動紀錄</a></li><li><a href="members.html">成員</a></li></ul></nav>
-<header class="hero"><div class="wrap"><h1>把一顆彈珠，變成一整條會動的線<small>MECHLINKER</small></h1><p class="lede">我們是一群自己組起來的學生志工。帶著一箱智高零件跑偏鄉，教小朋友動手做連鎖反應機關。</p><div class="cta"><a href="course.html">邀請我們去你的學校</a><a class="ghost" href="events.html">看看我們是誰</a></div><section class="about"><h2>我們是誰</h2><div><p>智造方舟是一群高中生自己組起來的志工團，沒有掛在任何學校底下。</p><p>我們做的事很單純：把智高零件裝箱，搭車到偏鄉的學校，花一個下午陪小朋友做出一組會動的連鎖反應機關。彈珠滾下斜坡、推倒骨牌、拉起一面旗子，每一步都是他們自己組的。</p><p>我們相信親手做出來、而且真的會動的東西，比任何一張講義都記得久。</p></div></section></div></header><main><div class="wrap"><div class="points"><section><h2>帶零件下鄉</h2><p>教具我們自己扛。到了現場拆箱就能開始，學校不用準備任何東西。</p></section><section><h2>一堂課做出成品</h2><p>課程拆成小朋友四十分鐘做得完的步驟，下課前每個人的機關都會動。</p></section><section><h2>學生自己帶隊</h2><p>從教案到現場都是我們自己來。年紀近，小朋友比較敢問問題。</p></section></div></div></main>
+<nav class="nav"><a class="nav__mark" href="index.html"><span class="nav__dot"></span>智造方舟 青年志工團</a><ul class="nav__links"><li><a href="index.html" aria-current="page">首頁</a></li><li><a href="islands.html">方舟群島</a></li><li><a href="captains.html">冒險艦隊</a></li><li><a href="course.html">海上生存手冊</a></li><li><a href="events.html">航行日誌</a></li><li><a href="members.html">成員</a></li></ul></nav>
+<header class="hero"><div class="wrap"><h1>智造方舟青年志工團<small>MECHLINKER</small></h1><p class="lede">化「智」為器 以手「造」史 「方」析萬象 「舟」行萬里
+回朔古今，從石斧到機槍，從滑輪到電梯，從人力到電學
+我們萬事具備，只欠你加入</p><div class="cta"><a href="events.html">航行日誌</a><a class="ghost" href="course.html">海上生存手冊</a></div><section class="about"><h2>團隊介紹</h2><div><p>西元2026年，神秘的智造方舟艦隊帶著千萬積木軍隊，悄悄潛入偏鄉小學，因為在賽場上看到STEAM 資源落差，這群生物透過暑期營隊與開學的持續課程，立志一舉攻佔新北市機關王大賽的競技舞台！</p></div></section></div></header><main><div class="wrap"><div class="points"><section><h2>自備糧草的艦隊</h2><p>別再擔心師資與教具的問題了! 我們可是扛著積木趴趴走的艦隊~</p></section><section><h2>漫長的航海之旅</h2><p>與其看一次煙火，不如航行在茫茫大海上眺望天際線，持之以恆地在開學堅持創作。</p></section><section><h2>艦隊幹部其實是學生?!</h2><p>從規劃到教案全由學生主導，同儕教學就是我們的超能力~</p></section></div></div></main>
 <footer><div class="wrap"><div class="base"><strong>智造方舟 青年志工團</strong><span>學生自組志工團</span></div></div></footer>
 
 </body>

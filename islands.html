@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>群島｜智造方舟 青年志工團</title>
+<title>方舟群島｜智造方舟 青年志工團</title>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#EDF1EC;--card:#fff;--ink:#12201A;--soft:#55655C;--rule:#C4CFC6;
@@ -175,6 +175,46 @@ footer h3{font-size:13px;letter-spacing:.1em;color:var(--soft);font-weight:500;m
 .isl-facts{margin:0 0 17px;padding-left:1.1em;color:var(--soft);font-size:15px}
 .about .album{margin-top:8px;margin-bottom:17px}
 .isl-lb[hidden],.isl-toast[hidden]{display:none!important}
+/* ---- 艦長分頁 ---- */
+.cap-top{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;margin:0 0 44px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.cap-top p{margin:0;font-size:14.5px;color:var(--soft);max-width:32em}
+.stamp-row{display:flex;gap:10px;flex-wrap:wrap}
+.stamp{width:50px;height:50px;border-radius:50%;border:2.5px solid var(--ca);color:var(--ca);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:900;font-size:18px;transform:rotate(-12deg);position:relative;flex:none}
+.stamp::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px dashed var(--ca);opacity:.7}
+.caps{display:grid;gap:clamp(36px,5vw,56px)}
+.cap{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(18px,4vw,44px);align-items:start}
+@media(max-width:860px){.cap{grid-template-columns:1fr}}
+.idcard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(18,32,26,.12);min-width:0}
+.id-top{background:var(--c);color:var(--cink);display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 16px;font-family:"Archivo",sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em}
+.id-top b{font-family:"Noto Sans TC",sans-serif;font-size:15px;font-weight:900;letter-spacing:.04em}
+.id-body{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:16px 16px 10px}
+@media(max-width:420px){.id-body{grid-template-columns:104px minmax(0,1fr);gap:12px}}
+.id-photo{position:relative;aspect-ratio:4/5;border-radius:6px;background:#f6efe2;border:1px solid var(--rule);overflow:hidden}
+.id-photo img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
+.letter{position:absolute;left:6px;top:6px;width:26px;height:26px;border-radius:4px;background:var(--c);color:var(--cink);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:900;font-size:14px}
+.id-info{min-width:0;padding-right:58px}
+@media(max-width:420px){.id-info{padding-right:0}}
+.rank{display:flex;align-items:center;gap:8px}
+.bars{display:grid;gap:2px}.bars i{display:block;width:22px;height:3px;background:var(--sun);border-radius:1px}
+.rank b{font-size:14px;font-weight:900}.rank span{font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--soft)}
+.idcard h3{font-size:30px;font-weight:900;line-height:1.1;margin:6px 0 8px;letter-spacing:-.01em}
+.idcard dl{margin:0;display:grid;gap:3px}
+.idcard dl div{display:grid;grid-template-columns:4.4em minmax(0,1fr);gap:6px;font-size:13.5px;line-height:1.5}
+.idcard dt{color:var(--soft);font-size:12px}.idcard dd{margin:0}
+.idcard>.stamp{position:absolute;right:16px;top:52px;width:58px;height:58px;font-size:20px;opacity:.85;transform:rotate(14deg);background:rgba(255,255,255,.6)}
+.id-motto{margin:0 16px;padding:10px 0;border-top:1px dashed var(--rule);font-size:17px;font-weight:700;line-height:1.5}
+.id-motto::before{content:"「"}.id-motto::after{content:"」"}
+.id-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 16px 14px}
+.id-no{font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.1em;color:var(--soft)}
+.barcode{height:24px;flex:1;max-width:150px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px);opacity:.75}
+.cap-log{min-width:0}
+.cap-eyebrow{font-family:"Archivo",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ca);margin:0 0 8px}
+.cap-log p{font-size:15.5px;line-height:1.85;color:var(--soft);margin:0 0 14px;max-width:60ch}
+.task{border-left:4px solid var(--ca);padding-left:14px;margin:6px 0 16px}
+.task h4{font-size:17px;font-weight:900;margin:0 0 4px}
+.task p{color:var(--ink);margin-bottom:0}
+.cap-log .earn{font-size:14px}.earn b{color:var(--ink)}
+
 .isl-lb{position:fixed;inset:0;z-index:300;background:rgba(12,20,16,.9);display:flex;align-items:center;justify-content:center;padding:24px}
 .isl-lb img{max-width:100%;max-height:calc(100vh - 80px);border-radius:3px}
 .isl-lb button{position:absolute;top:14px;right:14px;font:inherit;color:#fff;background:none;border:1.5px solid rgba(255,255,255,.6);border-radius:3px;padding:5px 12px;cursor:pointer}
@@ -182,10 +222,10 @@ footer h3{font-size:13px;letter-spacing:.1em;color:var(--soft);font-weight:500;m
 </head>
 <body>
 <div class="load" aria-hidden="true"><div class="load__in"><div class="track"><span class="marble"></span><i class="blk b1"></i><i class="blk b2"></i><i class="blk b3"></i></div><p class="load__name">智造方舟 青年志工團</p></div></div><script>try{var L=document.querySelector(".load");if(L){if(sessionStorage.getItem("mlk_seen")){L.parentNode.removeChild(L);}else{sessionStorage.setItem("mlk_seen","1");}}}catch(e){}</script>
-<nav class="nav"><a class="nav__mark" href="index.html"><span class="nav__dot"></span>智造方舟 青年志工團</a><ul class="nav__links"><li><a href="index.html">首頁</a></li><li><a href="islands.html" aria-current="page">群島</a></li><li><a href="course.html">機關王課程</a></li><li><a href="events.html">活動紀錄</a></li><li><a href="members.html">成員</a></li></ul></nav>
-<header class="hero"><div class="wrap"><h1>智造方舟群島<small>MECHLINKER</small></h1><p class="lede">方舟每去一個地方，海上就多一座島。點船和島看看我們的足跡，海上的機關和船點一下，就會告訴你背後的科學原理。</p></div></header><main style="padding-top:0"><div class="wrap"><div class="isl-chart" id="isl-top"><div class="isl-stage" id="stage"><div class="isl-labels" id="labels"></div><div class="isl-toast" id="toast" hidden role="status"><button type="button" id="toast-x" aria-label="關閉">×</button><b id="toast-t"></b><p id="toast-p"></p></div><div class="isl-hud"><div><span><i class="isl-dot" style="background:var(--grass)"></i>已登島</span><span><i class="isl-dot" style="background:var(--accent)"></i>航行中</span><span><i class="isl-dot" style="background:var(--fog)"></i>霧中島嶼</span></div><div><span>點海上的機關和船，看科學原理</span><span style="color:var(--soft)">拖曳旋轉 · 點船和島</span></div></div></div><aside class="isl-panel"><div id="panel" aria-live="polite"></div><div class="isl-jump" id="jump"></div></aside></div><div class="isl-rules"><section><h2>登島</h2><p>第一次到一所學校辦營隊，這座島就浮出海面。</p></section><section><h2>島會長大</h2><p>教過的孩子越多，島越高、樹越多。</p></section><section><h2>環台航線</h2><p>方舟號沿著台灣外海一路向東，繞島航行。</p></section><section><h2>霧中島</h2><p>2027「一路向東」的站點圍成一座台灣，抵達後霧就散了。</p></section></div><div id="entries"></div></div></main><div class="isl-lb" id="lightbox" hidden><img id="lb-img" alt=""><button type="button">關閉</button></div>
+<nav class="nav"><a class="nav__mark" href="index.html"><span class="nav__dot"></span>智造方舟 青年志工團</a><ul class="nav__links"><li><a href="index.html">首頁</a></li><li><a href="islands.html" aria-current="page">方舟群島</a></li><li><a href="captains.html">冒險艦隊</a></li><li><a href="course.html">海上生存手冊</a></li><li><a href="events.html">航行日誌</a></li><li><a href="members.html">成員</a></li></ul></nav>
+<header class="hero"><div class="wrap"><h1>智造方舟群島<small>MECHLINKER</small></h1><p class="lede">方舟每去一個地方，海上就多一座島。拖曳轉動海面，點船和島看看我們的足跡。</p></div></header><main style="padding-top:0"><div class="wrap"><div class="isl-chart" id="isl-top"><div class="isl-stage" id="stage"><div class="isl-labels" id="labels"></div><div class="isl-toast" id="toast" hidden role="status"><button type="button" id="toast-x" aria-label="關閉">×</button><b id="toast-t"></b><p id="toast-p"></p></div><div class="isl-hud"><div><span><i class="isl-dot" style="background:var(--grass)"></i>已登島</span><span><i class="isl-dot" style="background:var(--accent)"></i>航行中</span><span><i class="isl-dot" style="background:var(--fog)"></i>霧中島嶼</span></div><div><span style="color:var(--soft)">拖曳旋轉 · 點船和島</span></div></div></div><aside class="isl-panel"><div id="panel" aria-live="polite"></div><div class="isl-jump" id="jump"></div></aside></div><div class="isl-rules"><section><h2>登島</h2><p>第一次到一所學校辦營隊，這座島就浮出海面。</p></section><section><h2>島會長大</h2><p>教過的孩子越多，島越高、樹越多。</p></section><section><h2>環台航線</h2><p>方舟號沿著台灣外海一路向東，繞島航行。</p></section><section><h2>霧中島</h2><p>2027「一路向東」的站點圍成一座台灣，抵達後霧就散了。</p></section></div><div id="entries"></div></div></main><div class="isl-lb" id="lightbox" hidden><img id="lb-img" alt=""><button type="button">關閉</button></div>
 <footer><div class="wrap"><div class="base"><strong>智造方舟 青年志工團</strong><span>學生自組志工團</span></div></div></footer>
-<script>window.MLK_ISLANDS={"list":[{"id":"home","name":"方舟母港","sub":"HOME PORT","status":"landed","x":944,"y":300,"bridge":"carnival","trees":7,"bonus":1,"when":"2025","story":"","album":[],"facts":["2025 世界機關王大賽 GM 基礎組國中組銀牌之後成立","別人說「你會失敗的」，於是自己把方舟造出來","教具：智高（Gigo），主要用 C 系列零件","島上地標：山頂的銀牌紀念碑、方舟出航的木造碼頭，還有一座通往科學節礁的跨海大橋"]},{"id":"yunhai","name":"雲海島","sub":"雲海國小","status":"landed","x":670,"y":75,"trees":8,"when":"2026","album":[],"story":"為什麼叫雲海？雲海國小處於翡翠水庫集水區，地形和水氣交會下，時不時就會飄起超夢幻的雲海！雖然艦隊司令還沒有看過，但旁邊的二格山是他曾經山訓的地方｡ﾟヽ(ﾟ´Д`)ﾉﾟ 不過除了壯闊的山巒，雲海國小的小水手們對機關創作充滿無限的熱情與能量，展現出超乎想像的直覺與能力，期待未來能夠踏上屬於你們的機關王舞台。","facts":["四天營隊，20 人報名","8 人進入校隊，學期中常態培訓","目標：2027 新北市機關王大賽 GM 基礎組","島上地標：校門口的 150 階石梯，一路爬上山頂的校舍，山腰環繞一圈雲海"]},{"id":"carnival","name":"科學節礁","sub":"2026/11/13–15","status":"sailing","x":944,"y":480,"trees":0,"when":"2026/11","story":"","album":[],"facts":["第七屆臺灣科學節，臺北科學藝術園區","三天擺攤，主打諸葛弩與手槍兩把發射器","島上地標：紅色攤位帳篷，桌上的諸葛弩每隔幾秒發射一次；從方舟母港走跨海大橋就能到"]},{"id":"fog0","name":"第 1 站","sub":"一路向東","status":"fog","x":538,"y":96,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog1","name":"第 2 站","sub":"一路向東","status":"fog","x":740,"y":124,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog2","name":"第 3 站","sub":"一路向東","status":"fog","x":688,"y":270,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog3","name":"第 4 站","sub":"一路向東","status":"fog","x":586,"y":510,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog4","name":"第 5 站","sub":"一路向東","status":"fog","x":501,"y":666,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog5","name":"第 6 站","sub":"一路向東","status":"fog","x":391,"y":536,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog6","name":"第 7 站","sub":"一路向東","status":"fog","x":358,"y":380,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog7","name":"第 8 站","sub":"一路向東","status":"fog","x":439,"y":210,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]}],"membersFile":"members.html","preview":false};</script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script><script>
+<script>window.MLK_ISLANDS={"list":[{"id":"home","name":"方舟母港","sub":"HOME PORT","status":"landed","x":944,"y":300,"bridge":"carnival","trees":7,"bonus":1,"when":"2025","story":"","album":[],"facts":["2025 世界機關王大賽 GM 基礎組國中組銀牌之後成立","別人說「你會失敗的」，於是自己把方舟造出來","教具：智高（Gigo），主要用 C 系列零件","島上地標：銀牌紀念碑、艦隊司令部、造船的船塢、紅白燈塔、智高零件倉庫、機關訓練場、五艦長旗，還有通往科學節礁的跨海大橋"]},{"id":"yunhai","name":"雲海島","sub":"雲海國小","status":"landed","x":670,"y":75,"trees":8,"when":"2026","album":[],"story":"為什麼叫雲海？雲海國小處於翡翠水庫集水區，地形和水氣交會下，時不時就會飄起超夢幻的雲海！雖然艦隊司令還沒有看過，但旁邊的二格山是他曾經山訓的地方｡ﾟヽ(ﾟ´Д`)ﾉﾟ 不過除了壯闊的山巒，雲海國小的小水手們對機關創作充滿無限的熱情與能量，展現出超乎想像的直覺與能力，期待未來能夠踏上屬於你們的機關王舞台。","facts":["四天營隊，20 人報名","8 人進入校隊，學期中常態培訓","目標：2027 新北市機關王大賽 GM 基礎組","島上地標：校門口的 150 階石梯，一路爬上山頂的校舍，山腰環繞一圈雲海"]},{"id":"carnival","name":"科學節礁","sub":"2026/11/13–15","status":"sailing","x":944,"y":480,"trees":0,"when":"2026/11","story":"","album":[],"facts":["第七屆臺灣科學節，臺北科學藝術園區","三天擺攤，主打諸葛弩與手槍兩把發射器","島上地標：紅色攤位帳篷，桌上的諸葛弩每隔幾秒發射一次；從方舟母港走跨海大橋就能到"]},{"id":"fog0","name":"第 1 站","sub":"一路向東","status":"fog","x":538,"y":96,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog1","name":"第 2 站","sub":"一路向東","status":"fog","x":740,"y":124,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog2","name":"第 3 站","sub":"一路向東","status":"fog","x":688,"y":270,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog3","name":"第 4 站","sub":"一路向東","status":"fog","x":586,"y":510,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog4","name":"第 5 站","sub":"一路向東","status":"fog","x":501,"y":666,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog5","name":"第 6 站","sub":"一路向東","status":"fog","x":391,"y":536,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog6","name":"第 7 站","sub":"一路向東","status":"fog","x":358,"y":380,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]},{"id":"fog7","name":"第 8 站","sub":"一路向東","status":"fog","x":439,"y":210,"trees":0,"when":"2027 夏","story":"","album":[],"facts":["2027 暑假環台營隊預定站","每站約兩天半到三天，20 人、兩隊"]}],"membersFile":"members.html","preview":false};</script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script><script>
 (function(){
 var D=window.MLK_ISLANDS||{list:[]};
 const TW_COAST=[[668,0],[714,30],[769,60],[736,140],[681,260],[582,510],[516,680],[487,670],[461,586],[388,540],[351,460],[362,360],[417,240],[461,180],[531,94],[560,50],[637,26]];
@@ -270,7 +310,7 @@ if(!window.THREE){stage.insertAdjacentHTML("afterbegin",'<div class="fallback">3
 else{
   const SPREAD=16;
   const P=(x,y)=>new THREE.Vector3((x-560)/SPREAD,0,(y-340)/SPREAD);
-  const sizeOf=i=>i.status==="fog"?26:i.status==="sailing"?40:34+Math.min(i.trees,30)*2.8+(i.bonus?8:0);
+  const sizeOf=i=>i.status==="fog"?26:i.status==="sailing"?40:34+Math.min(i.trees,30)*2.8+(i.bonus?34:0);
   const heightOf=i=>i.status==="fog"?.5:i.status==="sailing"?.6:1.2+Math.min(i.trees,30)*.1+(i.bonus?.3:0);
   const rad=i=>sizeOf(i)/38*1.15*1.55;
   const hash=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))%9973;return h};
@@ -364,7 +404,7 @@ else{
 
   // 平台上的小細節：樹（孩子人數）、石頭、花、草、石板路、階梯、路燈、智高圍欄
   function decorate(g,isl,r,top,s,R,pathA,inner,noPath){
-    const blocks=[pathA].concat(bridgeAngles(isl)),free=a=>blocks.every(b=>Math.abs(Math.atan2(Math.sin(a-b),Math.cos(a-b)))>.34);
+    const blocks=[pathA].concat(bridgeAngles(isl),isl.id==="home"?Object.values(HOME_SPOTS).concat([pathA+Math.PI*.62]):[]),free=a=>blocks.every(b=>Math.abs(Math.atan2(Math.sin(a-b),Math.cos(a-b)))>.34);
     const spot=(lo,hi)=>{for(let k=0;k<24;k++){const a=R()*Math.PI*2;if(free(a))return polar(a,r*(lo+R()*(hi-lo)))}return polar(pathA+Math.PI,r*lo)};
     for(let t=0;t<isl.trees;t++){const [x,z]=spot(inner+.06,.82);(t%3===2?roundTree:pine)(g,x,top,z,.85+R()*.4)}
     for(let k=0;k<5;k++){const [x,z]=spot(inner,.86);const m=add(g,new THREE.IcosahedronGeometry(.07+R()*.1,0),PM.rock,x,top+.03,z);m.rotation.set(R()*3,R()*3,0)}
@@ -379,7 +419,7 @@ else{
     [-1,1].forEach(sd=>{const d=r*(inner+.85)/2,off=(noPath?.48:.32)*sd,x=Math.cos(pathA)*d-Math.sin(pathA)*off,z=Math.sin(pathA)*d+Math.cos(pathA)*off;
       add(g,new THREE.CylinderGeometry(.022,.03,.6,6),LM.dark,x,top+.3,z);add(g,new THREE.IcosahedronGeometry(.07,1),PM.glow,x,top+.62,z)});
     let prev=null;
-    for(let a=pathA+Math.PI-1.1;a<=pathA+Math.PI+1.1+1e-6;a+=.22){
+    if(isl.id!=="home")for(let a=pathA+Math.PI-1.1;a<=pathA+Math.PI+1.1+1e-6;a+=.22){
       const [x,z]=polar(a,r*.95*edgeK(a,s));add(g,new THREE.BoxGeometry(.05,.24,.05),LM.gold,x,top+.12,z);
       if(prev){const dx=x-prev[0],dz=z-prev[1],L=Math.hypot(dx,dz);
         const rail=add(g,new THREE.BoxGeometry(L,.05,.03),LM.gold,(x+prev[0])/2,top+.19,(z+prev[1])/2);rail.rotation.y=-Math.atan2(dz,dx);
@@ -391,6 +431,80 @@ else{
   }
 
   // 雲海國小：校門 + 150 階石梯（從沙灘一路爬到山頂校舍）
+  /* --- 方舟母港的港區：司令部、船塢、燈塔、零件倉庫、機關訓練場、五艦長旗 --- */
+  const HOME_SPOTS={hq:0,yard:-.6,light:.85,depot:2.3,train:-2.25};
+  function homeExtras(g,r,top,s){
+    const at=(a)=>{const o=new THREE.Group();o.rotation.y=-a;o.position.y=top;g.add(o);return o};
+    const steamC=[0x5e9e62,0x3f74b5,0xc0453a,0x8b5fbf,0xe7ebee].map(c=>new THREE.MeshStandardMaterial({color:c,flatShading:true,side:THREE.DoubleSide}));
+    const ticks=[];
+    // 艦隊司令部：兩層主樓＋瞭望塔＋招牌
+    {const o=at(HOME_SPOTS.hq),d=r*.62,h=new THREE.Group();h.position.x=d;h.rotation.y=Math.PI/2;o.add(h);
+      add(h,new THREE.BoxGeometry(1.7,1.1,1.1),LM.white,0,.55,0);prismRoof(h,1.8,.66,LM.roof,1.27);
+      for(let i=0;i<4;i++)for(let j=0;j<2;j++)add(h,new THREE.BoxGeometry(.18,.2,.02),LM.ribbon,-.6+i*.4,.35+j*.42,.56);
+      add(h,new THREE.BoxGeometry(.3,.45,.02),LM.wood,0,.22,.565);
+      add(h,new THREE.BoxGeometry(.55,2.2,.55),LM.white,-.95,1.1,-.1);add(h,new THREE.BoxGeometry(.7,.1,.7),LM.roof,-.95,2.25,-.1);
+      add(h,new THREE.ConeGeometry(.45,.5,4),LM.roof,-.95,2.55,-.1).rotation.y=Math.PI/4;
+      add(h,new THREE.BoxGeometry(.2,.25,.02),LM.glass,-.95,1.8,.18);
+      const sign=signTex(512,96,c=>{c.fillStyle="#1f3437";c.fillRect(0,0,512,96);c.fillStyle="#f3f5f1";c.font='700 54px "LXGW WenKai TC","Noto Sans TC",serif';c.textAlign="center";c.textBaseline="middle";c.fillText("智造方舟艦隊司令部",256,50)});
+      const sg=add(h,new THREE.PlaneGeometry(1.4,.26),new THREE.MeshStandardMaterial({map:sign}),.05,1.02,.57);sg.castShadow=false;
+      add(h,new THREE.CylinderGeometry(.025,.025,.8,5),mats.trunk,-.95,3.2,-.1);
+      const fl=add(h,new THREE.PlaneGeometry(.5,.3),mats.sail,-.7,3.45,-.1);ticks.push(T=>fl.rotation.y=Math.sin(T*3)*.3)}
+    // 船塢：滑道上一艘造到一半的方舟＋龍門吊
+    {const o=at(HOME_SPOTS.yard),x0=r*.66,x1=r*1.32,y1=.04,L=Math.hypot(x1-x0,top-y1),ang=Math.atan2(top-y1,x1-x0),ys=-top;
+      const slip=add(o,new THREE.BoxGeometry(L,.08,1.1),LM.wood,(x0+x1)/2,ys+(top+y1)/2,0);slip.rotation.z=-ang;
+      [-.5,.5].forEach(z=>{const rl=add(o,new THREE.BoxGeometry(L,.05,.06),LM.dark,(x0+x1)/2,ys+(top+y1)/2+.06,z);rl.rotation.z=-ang});
+      const hull=new THREE.Group();o.add(hull);const hx0=x0+.3,hx1=x0+L*.62;
+      const yAt=x=>ys+top-(x-x0)*Math.tan(ang);
+      const keel=add(hull,new THREE.BoxGeometry(hx1-hx0,.08,.08),LM.wood,(hx0+hx1)/2,(yAt(hx0)+yAt(hx1))/2+.12,0);keel.rotation.z=-ang;
+      for(let i=0;i<6;i++){const x=hx0+(hx1-hx0)*i/5,rib=new THREE.Mesh(new THREE.TorusGeometry(.42-Math.abs(i-2.5)*.05,.035,5,14,Math.PI),LM.wood);
+        rib.rotation.set(0,Math.PI/2,Math.PI);rib.position.set(x,yAt(x)+.55,0);rib.castShadow=true;hull.add(rib)}
+      [-.38,.38].forEach(z=>{const pl=add(hull,new THREE.BoxGeometry((hx1-hx0)*.55,.06,.03),mats.trunk,(hx0+hx1)/2-.2,yAt((hx0+hx1)/2)+.42,z);pl.rotation.z=-ang});
+      const gx=(x0+x1)/2-.2,gy=yAt(gx);
+      [-.85,.85].forEach(z=>{add(o,new THREE.BoxGeometry(.12,2.4-gy+ys+top,.12),LM.gold,gx,ys+top+(2.4-(ys+top-gy))/2-((ys+top)-gy),z)});
+      add(o,new THREE.BoxGeometry(.16,.16,1.9),LM.gold,gx,gy+2.4,0);
+      const rope=add(o,new THREE.CylinderGeometry(.015,.015,1,4),LM.dark,gx,gy+2,0),hook=new THREE.Group();o.add(hook);
+      add(hook,new THREE.BoxGeometry(.32,.22,.32),LM.gold,0,0,0);
+      ticks.push(T=>{const zz=Math.sin(T*.5)*.55,yy=gy+1.25+Math.sin(T*.9)*.25;hook.position.set(gx,yy,zz);rope.position.set(gx,(yy+gy+2.4)/2,zz);rope.scale.y=gy+2.4-yy})}
+    // 燈塔：紅白相間，光束一直轉
+    {const o=at(HOME_SPOTS.light),x=r*.86;
+      [0,1,2,3].forEach(i=>add(o,new THREE.CylinderGeometry(.34-i*.05,.4-i*.05,.62,12),i%2?LM.roof:LM.white,x,.31+i*.62,0));
+      add(o,new THREE.CylinderGeometry(.3,.3,.1,12),LM.dark,x,2.53,0);
+      add(o,new THREE.CylinderGeometry(.22,.22,.34,10),LM.glass,x,2.75,0);add(o,new THREE.IcosahedronGeometry(.12,1),PM.glow,x,2.75,0);
+      add(o,new THREE.ConeGeometry(.3,.36,10),LM.roof,x,3.1,0);
+      const bg=new THREE.Group();bg.position.set(x,2.75,0);o.add(bg);
+      const beam=new THREE.Mesh(new THREE.ConeGeometry(1.2,8,12,1,true),LM.beam);beam.rotation.z=Math.PI/2;beam.position.x=4;bg.add(beam);
+      ticks.push(T=>bg.rotation.y=T*.7)}
+    // 智高零件倉庫：倉庫＋疊起來的零件箱＋小推車
+    {const o=at(HOME_SPOTS.depot),d=r*.6,w=new THREE.Group();w.position.x=d;w.rotation.y=Math.PI/2;o.add(w);
+      add(w,new THREE.BoxGeometry(1.5,.85,1),LM.wood,0,.42,0);
+      const rf=add(w,new THREE.CylinderGeometry(.55,.55,1.56,12,1,false,0,Math.PI),LM.roof,0,.85,0);rf.rotation.z=Math.PI/2;rf.scale.set(1,1,.9);
+      add(w,new THREE.BoxGeometry(.6,.6,.02),LM.dark,0,.32,.51);
+      for(let i=0;i<3;i++)for(let j=0;j<3-i;j++){const b=add(w,new THREE.BoxGeometry(.3,.24,.3),LM.gold,-.45+j*.32+i*.16,.12+i*.24,.8);
+        add(w,new THREE.CylinderGeometry(.03,.03,.02,8),LM.dark,-.45+j*.32+i*.16,.14+i*.24,.96).rotation.x=Math.PI/2}
+      const cart=new THREE.Group();cart.position.set(.75,0,.85);w.add(cart);
+      add(cart,new THREE.BoxGeometry(.4,.14,.28),LM.ribbon,0,.16,0);[-.13,.13].forEach(xx=>[-.13,.13].forEach(zz=>add(cart,new THREE.CylinderGeometry(.05,.05,.03,10),LM.dark,xx,.06,zz).rotation.x=Math.PI/2));
+      add(cart,new THREE.BoxGeometry(.22,.18,.2),LM.gold,0,.32,0)}
+    // 機關訓練場：三層斜坡，鋼珠一路滾下去推倒骨牌
+    {const o=at(HOME_SPOTS.train),d=r*.58,t=new THREE.Group();t.position.x=d;t.rotation.y=Math.PI/2;o.add(t);
+      add(t,new THREE.BoxGeometry(1.8,.08,1),LM.wood,0,.04,0);
+      [[-.75,-.35],[.75,-.35],[-.75,.35],[.75,.35]].forEach(([x,z])=>add(t,new THREE.BoxGeometry(.06,1.4,.06),LM.dark,x,.7,z));
+      const lv=[[1.25,-.7,.55],[.95,.65,-.55],[.65,-.7,.55]],path=[];
+      lv.forEach(([y,xa,xb],i)=>{const L=Math.abs(xb-xa)+.1,rp=add(t,new THREE.BoxGeometry(L,.04,.16),i%2?LM.roof:LM.gold,(xa+xb)/2,y-.08,0);rp.rotation.z=(xb>xa?-1:1)*.15;
+        path.push([xa,y],[xb,y-.18])});
+      path.push([.55,.2],[-.1,.2]);
+      const dom=[];for(let i=0;i<6;i++){const p=new THREE.Group();p.position.set(-.15-i*.12,.08,0);t.add(p);add(p,new THREE.BoxGeometry(.03,.2,.12),i%2?LM.ribbon:LM.white,0,.1,0);dom.push(p)}
+      const ball=add(t,new THREE.SphereGeometry(.06,12,8),LM.silver,0,0,0);
+      const segs=[];let tot=0;for(let i=0;i+1<path.length;i++){const l=Math.hypot(path[i+1][0]-path[i][0],path[i+1][1]-path[i][1]);segs.push(l);tot+=l}
+      ticks.push(T=>{const c=T%6,k=Math.min(c/3.2,1)*tot;let acc=0,i=0;while(i<segs.length-1&&acc+segs[i]<k){acc+=segs[i];i++}
+        const u=segs[i]?(k-acc)/segs[i]:1,[ax,ay]=path[i],[bx,by]=path[i+1];ball.position.set(ax+(bx-ax)*u,ay+(by-ay)*u+.06,0);ball.visible=c<3.4;
+        dom.forEach((p,j)=>{const q=Math.min(Math.max((c-3.2-j*.12)/.2,0),1);p.rotation.z=c>5.6?0:q*1.2})})}
+    // 五艦長旗：S T E A M 五面旗圍在紀念碑後方
+    [-.8,-.4,0,.4,.8].forEach((a,i)=>{const [x,z]=polar(a,r*.44);
+      add(g,new THREE.CylinderGeometry(.025,.025,1.4,6),LM.silver,x,top+.7,z);
+      const fl=add(g,new THREE.PlaneGeometry(.42,.28,4,1),steamC[i],x,top+1.24,z);fl.geometry.translate(.21,0,0);fl.castShadow=false;
+      ticks.push(T=>fl.rotation.y=-a+Math.PI/2+Math.sin(T*2.4+i)*.35)});
+    anim.homeTick=T=>ticks.forEach(f=>f(T));
+  }
   function signTex(w,h,draw){const c=document.createElement("canvas");c.width=w;c.height=h;const t=new THREE.CanvasTexture(c);
     const run=()=>{const x=c.getContext("2d");x.clearRect(0,0,w,h);draw(x);t.needsUpdate=true};run();document.fonts&&document.fonts.ready.then(run);return t}
   function yunhaiStairs(g,r,top,s,pathA,rr,H){
@@ -433,6 +547,7 @@ else{
 
   function landmarks(isl,g,cap,r,top,s,pathA,dockAt){
     if(isl.id==="home"){
+      homeExtras(g,r,top,s);
       add(cap,new THREE.BoxGeometry(.42,.32,.42),LM.stone,-.38,.12,.22);add(cap,new THREE.BoxGeometry(.3,.12,.3),LM.stone,-.38,.33,.22);
       const m=new THREE.Group();m.position.set(-.38,.82,.22);cap.add(m);
       add(m,new THREE.CylinderGeometry(.26,.26,.06,24),LM.silver,0,0,0).rotation.x=Math.PI/2;add(m,new THREE.TorusGeometry(.26,.035,6,24),LM.silver,0,0,0);
@@ -539,12 +654,12 @@ else{
     });
   }
 
-  /* --- 海上的大型機關與船：點一下會出現背後的科學原理 --- */
+  /* --- 海上的大型機關與船（海景裝飾） --- */
   const sciGroup=new THREE.Group();scene.add(sciGroup);const sci={},sciLabels=[],fleet=[];
   const metal=new THREE.MeshStandardMaterial({color:0x9aa6ad,metalness:.6,roughness:.4,flatShading:true});
   const ropeMat=new THREE.MeshStandardMaterial({color:0xd9c79f});
   function sciObj(k,x,z,ly){const g=new THREE.Group();g.position.set(x,0,z);g.userData.sci=k;sciGroup.add(g);sci[k]=g;
-    const el=document.createElement("div");el.className="lbl mech";el.innerHTML="<b>"+SCI[k][2]+"</b>";labelsEl.appendChild(el);sciLabels.push({el,g,y:ly});return g}
+    return g}
   function gearMesh(R,t,mat){const n=Math.max(8,Math.round(R*9)),ro=R+.18,ri=R-.12,s=new THREE.Shape();
     for(let i=0;i<n*2;i++){const a0=i/(n*2)*Math.PI*2,a1=(i+1)/(n*2)*Math.PI*2,r=i%2?ri:ro;if(!i)s.moveTo(Math.cos(a0)*r,Math.sin(a0)*r);s.lineTo(Math.cos(a0)*r,Math.sin(a0)*r);s.lineTo(Math.cos(a1)*r,Math.sin(a1)*r)}
     const h=new THREE.Path();h.absarc(0,0,R*.25,0,Math.PI*2,true);s.holes.push(h);
@@ -707,7 +822,7 @@ else{
   rebuildWorld=()=>{
     Object.values(groups).forEach(g=>scene.remove(g));Object.keys(groups).forEach(k=>delete groups[k]);
     Object.values(labels).forEach(l=>l.el.remove());Object.keys(labels).forEach(k=>delete labels[k]);
-    delete anim.medal;delete anim.clouds;delete anim.bolt;delete anim.flag;delete anim.foam;
+    delete anim.medal;delete anim.clouds;delete anim.bolt;delete anim.flag;delete anim.foam;delete anim.homeTick;
     islands.forEach(buildIsland);buildBridges();buildRoute();
   };
 
@@ -781,11 +896,11 @@ else{
     ray.setFromCamera(mouse,camera);
     const hit=ray.intersectObjects([ship,sciGroup,...Object.values(groups)],true)[0];if(!hit)return;
     let o=hit.object;while(o&&!o.userData.id&&!o.userData.sci)o=o.parent;if(!o)return;
-    if(o.userData.sci){const k=o.userData.sci;showToast(SCI[k][0],SCI[k][1]);return}
+    if(o.userData.sci)return;
     if(o.userData.id==="ark"){show("ark");return}
     show(o.userData.id);
   });
-  function resize(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
+  function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
   new ResizeObserver(resize).observe(stage);resize();
 
   /* --- 方舟號自由航行（避開島嶼與海上機關） --- */
@@ -813,6 +928,7 @@ else{
   function place(el,v,dy){tmp.set(v.x,v.y+dy,v.z).project(camera);const w=stage.clientWidth,h=stage.clientHeight;
     const vis=tmp.z<1&&Math.abs(tmp.x)<1.1&&Math.abs(tmp.y)<1.1;el.style.display=vis?"":"none";if(vis){el.style.left=((tmp.x+1)/2*w)+"px";el.style.top=((1-tmp.y)/2*h)+"px"}}
   function frame(){
+    if(!stage.offsetWidth){requestAnimationFrame(frame);return}
     const t=clock.getElapsedTime(),dt=Math.min(t-last,.1);last=t;const T=reduce?2.2:t;
     if(!reduce){const a=seaGeo.attributes.position;
       for(let i=0;i<a.count;i++){const x=seaBase[i*3],z=seaBase[i*3+2];a.array[i*3+1]=Math.sin(x*.5+t*1.1)*.09+Math.cos(z*.6+t*.8)*.09}
@@ -833,6 +949,7 @@ else{
     // 地標
     if(anim.medal)anim.medal.rotation.y=T*.8;if(anim.flag&&!reduce)anim.flag.rotation.y=Math.sin(t*3)*.25;
     if(anim.clouds){anim.clouds.rotation.y=Math.sin(T*.25)*.12;anim.clouds.position.y=anim.clouds.userData.y+Math.sin(T*.6)*.06}
+    if(anim.homeTick)anim.homeTick(T);
     if(anim.foam)anim.foam.forEach((f,i)=>{const k=(T*.9+i/5)%1;f.scale.setScalar(.5+k*.9);f.position.y=.12+k*.12});
     if(anim.bolt){const c=T%3,b=anim.bolt,k=Math.min(c/1.3,1);b.m.visible=c<1.3;b.m.position.set(b.from.x,b.from.y+Math.sin(k*Math.PI)*1.4,b.from.z+k*4);b.m.rotation.x=Math.PI/2-Math.cos(k*Math.PI)*.6}
     islands.forEach(i=>{if(i.status==="fog"&&!reduce&&groups[i.id])groups[i.id].position.y=Math.sin(t*.8+(i.seed||hash(i.id)))*.08});

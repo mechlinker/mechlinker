@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>機關王課程｜智造方舟 青年志工團</title>
+<title>海上生存手冊｜智造方舟 青年志工團</title>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#EDF1EC;--card:#fff;--ink:#12201A;--soft:#55655C;--rule:#C4CFC6;
@@ -175,6 +175,46 @@ footer h3{font-size:13px;letter-spacing:.1em;color:var(--soft);font-weight:500;m
 .isl-facts{margin:0 0 17px;padding-left:1.1em;color:var(--soft);font-size:15px}
 .about .album{margin-top:8px;margin-bottom:17px}
 .isl-lb[hidden],.isl-toast[hidden]{display:none!important}
+/* ---- 艦長分頁 ---- */
+.cap-top{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;margin:0 0 44px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.cap-top p{margin:0;font-size:14.5px;color:var(--soft);max-width:32em}
+.stamp-row{display:flex;gap:10px;flex-wrap:wrap}
+.stamp{width:50px;height:50px;border-radius:50%;border:2.5px solid var(--ca);color:var(--ca);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:900;font-size:18px;transform:rotate(-12deg);position:relative;flex:none}
+.stamp::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1px dashed var(--ca);opacity:.7}
+.caps{display:grid;gap:clamp(36px,5vw,56px)}
+.cap{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(18px,4vw,44px);align-items:start}
+@media(max-width:860px){.cap{grid-template-columns:1fr}}
+.idcard{position:relative;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--rule);box-shadow:0 10px 30px rgba(18,32,26,.12);min-width:0}
+.id-top{background:var(--c);color:var(--cink);display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 16px;font-family:"Archivo",sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em}
+.id-top b{font-family:"Noto Sans TC",sans-serif;font-size:15px;font-weight:900;letter-spacing:.04em}
+.id-body{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:16px 16px 10px}
+@media(max-width:420px){.id-body{grid-template-columns:104px minmax(0,1fr);gap:12px}}
+.id-photo{position:relative;aspect-ratio:4/5;border-radius:6px;background:#f6efe2;border:1px solid var(--rule);overflow:hidden}
+.id-photo img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
+.letter{position:absolute;left:6px;top:6px;width:26px;height:26px;border-radius:4px;background:var(--c);color:var(--cink);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:900;font-size:14px}
+.id-info{min-width:0;padding-right:58px}
+@media(max-width:420px){.id-info{padding-right:0}}
+.rank{display:flex;align-items:center;gap:8px}
+.bars{display:grid;gap:2px}.bars i{display:block;width:22px;height:3px;background:var(--sun);border-radius:1px}
+.rank b{font-size:14px;font-weight:900}.rank span{font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.12em;color:var(--soft)}
+.idcard h3{font-size:30px;font-weight:900;line-height:1.1;margin:6px 0 8px;letter-spacing:-.01em}
+.idcard dl{margin:0;display:grid;gap:3px}
+.idcard dl div{display:grid;grid-template-columns:4.4em minmax(0,1fr);gap:6px;font-size:13.5px;line-height:1.5}
+.idcard dt{color:var(--soft);font-size:12px}.idcard dd{margin:0}
+.idcard>.stamp{position:absolute;right:16px;top:52px;width:58px;height:58px;font-size:20px;opacity:.85;transform:rotate(14deg);background:rgba(255,255,255,.6)}
+.id-motto{margin:0 16px;padding:10px 0;border-top:1px dashed var(--rule);font-size:17px;font-weight:700;line-height:1.5}
+.id-motto::before{content:"「"}.id-motto::after{content:"」"}
+.id-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 16px 14px}
+.id-no{font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.1em;color:var(--soft)}
+.barcode{height:24px;flex:1;max-width:150px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px);opacity:.75}
+.cap-log{min-width:0}
+.cap-eyebrow{font-family:"Archivo",sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ca);margin:0 0 8px}
+.cap-log p{font-size:15.5px;line-height:1.85;color:var(--soft);margin:0 0 14px;max-width:60ch}
+.task{border-left:4px solid var(--ca);padding-left:14px;margin:6px 0 16px}
+.task h4{font-size:17px;font-weight:900;margin:0 0 4px}
+.task p{color:var(--ink);margin-bottom:0}
+.cap-log .earn{font-size:14px}.earn b{color:var(--ink)}
+
 .isl-lb{position:fixed;inset:0;z-index:300;background:rgba(12,20,16,.9);display:flex;align-items:center;justify-content:center;padding:24px}
 .isl-lb img{max-width:100%;max-height:calc(100vh - 80px);border-radius:3px}
 .isl-lb button{position:absolute;top:14px;right:14px;font:inherit;color:#fff;background:none;border:1.5px solid rgba(255,255,255,.6);border-radius:3px;padding:5px 12px;cursor:pointer}
@@ -182,8 +222,8 @@ footer h3{font-size:13px;letter-spacing:.1em;color:var(--soft);font-weight:500;m
 </head>
 <body>
 <div class="load" aria-hidden="true"><div class="load__in"><div class="track"><span class="marble"></span><i class="blk b1"></i><i class="blk b2"></i><i class="blk b3"></i></div><p class="load__name">智造方舟 青年志工團</p></div></div><script>try{var L=document.querySelector(".load");if(L){if(sessionStorage.getItem("mlk_seen")){L.parentNode.removeChild(L);}else{sessionStorage.setItem("mlk_seen","1");}}}catch(e){}</script>
-<nav class="nav"><a class="nav__mark" href="index.html"><span class="nav__dot"></span>智造方舟 青年志工團</a><ul class="nav__links"><li><a href="index.html">首頁</a></li><li><a href="islands.html">群島</a></li><li><a href="course.html" aria-current="page">機關王課程</a></li><li><a href="events.html">活動紀錄</a></li><li><a href="members.html">成員</a></li></ul></nav>
-<header class="hero"><div class="wrap"><h1>我們在教什麼<small>MECHLINKER</small></h1><p class="lede">一個下午，從一箱零件到一組會動的機關。</p></div></header><main><div class="wrap"><section class="about"><h2>課程長什麼樣</h2><div><p>四十到六十分鐘一場。先完整示範一次連鎖反應，再把它拆成幾個小關卡讓小朋友分組自己組。最後把全班的機關串成一條，一起按下第一顆彈珠。</p></div></section><section class="about"><h2>學校要準備什麼</h2><div><p>教具和零件我們自己帶，到現場拆箱就能開始。學校只要提供一間有桌子的教室，和一位熟悉班級狀況的老師在場。</p></div></section><section class="about"><h2>適合的對象</h2><div><p>國小三到六年級最合適。低年級也做得來，但流程要縮短、帶隊人手要增加。單場人數建議三十人以內。</p></div></section></div></main>
+<nav class="nav"><a class="nav__mark" href="index.html"><span class="nav__dot"></span>智造方舟 青年志工團</a><ul class="nav__links"><li><a href="index.html">首頁</a></li><li><a href="islands.html">方舟群島</a></li><li><a href="captains.html">冒險艦隊</a></li><li><a href="course.html" aria-current="page">海上生存手冊</a></li><li><a href="events.html">航行日誌</a></li><li><a href="members.html">成員</a></li></ul></nav>
+<header class="hero"><div class="wrap"><h1>海上生存手冊<small>MECHLINKER</small></h1><p class="lede">創造機關? 感覺好難，我真的可以嗎?</p></div></header><main><div class="wrap"><section class="about"><h2>課程如何運作</h2><div><p>四天的營隊，從簡單的模仿科學原理到創作完整的連動關卡，透過無限的創造力與實踐能力，零失誤的機關連動輕鬆完成。</p></div></section><section class="about"><h2>適合的對象</h2><div><p>國小三到六年級最合適，單場人數大約在二十人左右。</p></div></section><section class="about"><h2>逆向工程航海羅盤</h2><div><p>動手前，先在腦海裡畫出航線，從終極目標（例如最後要觸發什麼機關），然後再發想需要什麼樣的結構配置，先用大腦航行，再動手組裝積木！</p></div></section><section class="about"><h2>掌握基礎航海力學</h2><div><p>想在海上活下去，各式科學原理必須信手拈來，  從這些最簡單的機械原理開始，再突破自我，航向新世界！</p></div></section></div></main>
 <footer><div class="wrap"><div class="base"><strong>智造方舟 青年志工團</strong><span>學生自組志工團</span></div></div></footer>
 
 </body>
